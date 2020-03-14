@@ -10,9 +10,8 @@ void HighwayPatrol::scanHighway(Highway* h)
 {
     std::cout << name << ": scanning highway for speeders" << std::endl;
 
-    for( int i = h->vehicles.size(); --i >= 0; )
+    for( auto* v : h->vehicles )
     {
-        auto* v = h->vehicles[i];
         if( v->speed > h->speedLimit + 5 )
         {
             pullOver(v, v->speed > (h->speedLimit + 15), h );
