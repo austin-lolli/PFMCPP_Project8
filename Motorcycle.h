@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Vehicle.h"
+
 #include <iostream>
 #include <limits>
 

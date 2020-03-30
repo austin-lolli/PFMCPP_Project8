@@ -46,6 +46,12 @@ send me a DM to check your pull request
 
  Wait for my code review.
  */
+#include "Car.h"
+#include "Highway.h"
+#include "HighwayPatrol.h"
+#include "Motorcycle.h"
+#include "SemiTruck.h"
+#include "Vehicle.h"
 
 #include <iostream>
 #include <vector>
