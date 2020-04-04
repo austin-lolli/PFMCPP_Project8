@@ -1,5 +1,10 @@
+#pragma once
+
 #include "Highway.h"
 #include "Vehicle.h"
+#include "Car.h"
+#include "Motorcycle.h"
+#include "SemiTruck.h"
 
 #include <cassert>
 
@@ -14,11 +19,21 @@ void Highway::changeSpeed(int newSpeed)
 
 void Highway::addVehicleInternal(Vehicle* v)
 {
-    assert(false);
-
     /*
     depending on the derived type, call the member function that doesn't evade the cops. 
     */
+    if( Car* c = dynamic_cast<Car*>(v))
+    {
+        c->closeWindows();
+    }
+    else if( Motorcycle* m = dynamic_cast<Motorcycle*>(v))
+    {
+        m->lanesplitAndRace(99);
+    }
+    else if( SemiTruck* st = dynamic_cast<SemiTruck*>(v))
+    {
+        //do a semi truck thing, turn on radio? 
+    }
 }
 
 void Highway::removeVehicleInternal(Vehicle* v)

@@ -2,7 +2,7 @@
 
 #include "Vehicle.h"
 
-struct HighwayPatrol : Vehicle 
+struct HighwayPatrol : Vehicle
 {
     HighwayPatrol();
     void scanHighway(Highway* h);
