@@ -106,17 +106,37 @@ int main()
     /*
      construct 2 more Car instances via emplace_back.
      */
-    
+    cars.emplace_back("michael");
+    cars.emplace_back("suzy");
     /*
      now reserve and emplace_back your Trucks and Motorcyles
      */
+     motorcycles.reserve(2);
+     motorcycles.emplace_back("dirk");
+     motorcycles.emplace_back("esther");
+
+     trucks.reserve(2);
+     trucks.emplace_back("rodney");
+     trucks.emplace_back("darlene");
     
-    
-    
-    
-    assert(false);
+
     //add the cars, motorcycles and trucks to the highway using range-based for() loops: for( element : vec ) { ... }
     //be careful to not accidentally make element copies when iterating.
+
+    for( auto& c : cars)
+    {
+        highway.addVehicle( &c );
+    };
+
+     for( auto& m : motorcycles)
+    {
+        highway.addVehicle( &m );
+    };
+
+    for( auto& t : trucks)
+    {
+        highway.addVehicle( &t );
+    };
     
     HighwayPatrol cop;
     cop.scanHighway(&highway);
