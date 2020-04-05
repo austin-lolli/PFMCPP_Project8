@@ -32,7 +32,7 @@ void Highway::addVehicleInternal(Vehicle* v)
     }
     else if( SemiTruck* st = dynamic_cast<SemiTruck*>(v))
     {
-        //do a semi truck thing, turn on radio? 
+        st->turnOnRadio();
     }
 }
 
@@ -53,7 +53,7 @@ void Highway::removeVehicleInternal(Vehicle* v)
     }
     else if( SemiTruck* st = dynamic_cast<SemiTruck*>(v))
     {
-        //pull over
+        st->pullOver();
     }
 }
 
