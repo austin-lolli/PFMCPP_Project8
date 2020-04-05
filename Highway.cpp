@@ -38,13 +38,23 @@ void Highway::addVehicleInternal(Vehicle* v)
 
 void Highway::removeVehicleInternal(Vehicle* v)
 {
-    assert(false);
-
     /*
     depending on the derived type, call the member function that tries to evade the cops. 
 
     trucks pull over, but cars and bikes try to evade!!
     */
+        if( Car* c = dynamic_cast<Car*>(v))
+    {
+        c->tryToEvade();
+    }
+    else if( Motorcycle* m = dynamic_cast<Motorcycle*>(v))
+    {
+        m->tryToEvade();
+    }
+    else if( SemiTruck* st = dynamic_cast<SemiTruck*>(v))
+    {
+        //pull over
+    }
 }
 
 void Highway::addVehicle(Vehicle* v)
