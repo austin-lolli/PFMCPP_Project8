@@ -1,5 +1,4 @@
 #include "HighwayPatrol.h"
-#include "Highway.h"
 
 #include <iostream>
 

@@ -1,7 +1,14 @@
 #pragma once
 
+#include "Vehicle.h"
+#include "Car.h"
+#include "Motorcycle.h"
+#include "SemiTruck.h"
+
 #include <vector>
 #include <algorithm>
+
+struct HighwayPatrol;
 
 struct Highway
 {
@@ -13,4 +20,5 @@ private:
     void removeVehicleInternal(Vehicle* v);
     int speedLimit = 65;
     std::vector<Vehicle*> vehicles;
+    friend HighwayPatrol;
 };
