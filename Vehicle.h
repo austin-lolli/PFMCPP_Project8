@@ -4,7 +4,6 @@
 #include <iostream>
 
 struct HighwayPatrol;
-struct Highway;
 
 struct Vehicle
 {
@@ -28,6 +27,5 @@ struct Vehicle
 protected:
     int speed = 0;
     std::string name;
-    friend Highway;
     friend HighwayPatrol;
 };
