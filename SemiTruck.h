@@ -6,7 +6,7 @@ struct SemiTruck : public Vehicle
 {
     SemiTruck(const std::string& s);
 
-    virtual ~SemiTruck();
+    ~SemiTruck() override;
     SemiTruck(const SemiTruck&);
     SemiTruck& operator=(const SemiTruck&);
     
